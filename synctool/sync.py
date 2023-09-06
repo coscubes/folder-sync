@@ -2,7 +2,6 @@
 Tool for synchronization of Two directories
 """
 
-import  argparse
 from    datetime import datetime
 import  hashlib
 import  logging
@@ -12,7 +11,7 @@ import  warnings
 
 class FolderSynchronization:
     """
-    Folder sync: TODO Documentation
+    Class that synchornizes two folders
     """
     def __init__(
         self,
@@ -21,15 +20,28 @@ class FolderSynchronization:
         log_path        : str = None,
     ) -> None:
         """
-        TODO: Documentation
+        Parameters
+        -----------
+        source : str
+            Path to the source directory
+        destination : str
+            Path to the replica directory
+        log_path : str
+            Path to the text file for logging. Should not be placed in source
+            or destination directories
+
+        Returns
+        ------------
+            None
         """
         self.src        = source
         self.dest       = destination
         self.log_path   = log_path
 
+        # Create logger config
         logging.basicConfig(
             filename    = self.log_path,
-            filemode    = 'a',
+            filemode    = 'a',              # Append mode
             level       = logging.DEBUG,
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
         )
@@ -62,7 +74,21 @@ class FolderSynchronization:
 
 
     def _synchronize_folders(self, src : str, dest : str) -> None:
-        """TODO"""
+        """
+        Method to recursively synchonize two folders.
+
+        Parameters
+        -----------
+        src : str
+            Source directory
+        dest : str
+            Destination Directory
+
+        Returns
+        -----------
+        None
+        """
+
         # Remove all files / directories in the replica folder that aren't in source
         for object_name in os.listdir(dest):
             src_path = os.path.join(src, object_name)
@@ -89,29 +115,26 @@ class FolderSynchronization:
                             f"Removed folder in destination {dest_path}"
                         )
 
+        # Copy files and directories from source to destination that mismatch
+        for filenames in os.listdir(src):
+            src_path = os.path.join(src, filenames)
+            dst_path = os.path.join(dest, filenames)
 
-        # Working on files / directories
-        for root, directories, files in os.walk(src):
-            for file_name in files:
-                src_path = os.path.join(src, file_name)
-                dst_path = os.path.join(dest, file_name)
+            if os.path.isfile(src_path):
                 if not os.path.isfile(dst_path):
                     # File does not exist in the destination folder
                     shutil.copy(src_path, dst_path)
                     print(f"Copied {src_path} to destination folder")
                     logging.info(f"Copied {src_path} to destination folder")
                 elif not self.compare_files(src_path, dst_path):
-                    # file exists in destination but is modified in source folder
+                    # file exists in destination but is modified.
                     shutil.copy(src_path, dst_path)
                     print(f"Copied {src_path} to destination folder")
                     logging.info(f"Copied {src_path} to destination folder")
                 else:
                     pass # File already exists in the destination folder
 
-            for dir_name in directories:
-                src_path = os.path.join(src, dir_name)
-                dst_path = os.path.join(dest, dir_name)
-
+            elif os.path.isdir(src_path):
                 if not os.path.isdir(dst_path):
                     os.mkdir(dst_path)
                     print(f"Created Directory in destination folder: {dst_path}")
