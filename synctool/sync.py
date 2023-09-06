@@ -43,7 +43,7 @@ class FolderSynchronization:
             filename    = self.log_path,
             filemode    = 'a',              # Append mode
             level       = logging.DEBUG,
-            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+            format      = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
         )
 
 
@@ -80,13 +80,26 @@ class FolderSynchronization:
         Parameters
         -----------
         src : str
-            Source directory
+            Source directory path
         dest : str
-            Destination Directory
+            Destination Directory path
 
         Returns
         -----------
         None
+
+
+        How does it work?
+        1. Delete all the files in destination that do not exist in source
+        2. Delete all the folders in destination that do not exist in source
+        3. If a file is present in source but not in Destination
+            Copy file
+        4. If file is present in source and destination but md5sum is a mismatch
+            Copy file (FIle modified from original)
+        5. If a directory is present in source but not in destination
+            Create directory
+        6. Recursively call the function forall source and destination
+            directories
         """
 
         # Remove all files / directories in the replica folder that aren't in source

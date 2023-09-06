@@ -1,0 +1,69 @@
+2023-09-06 05:21:35,191 - root - INFO - Started Logging for ./tests/src1 
+ ./tests/dest1
+2023-09-06 05:21:35,192 - root - INFO - Finished folder sync ./tests/src1 
+ ./tests/dest1
+2023-09-06 05:21:39,695 - root - WARNING - Folder doesn't exist at ./tests/dest7.
+ Enter Y to create a folder at destination
+2023-09-06 05:21:41,840 - root - INFO - Started Logging for ./tests/src1 
+ ./tests/dest7
+2023-09-06 05:21:41,841 - root - INFO - Copied ./tests/src1/dummy3.txt to destination folder
+2023-09-06 05:21:41,841 - root - INFO - Created Directory in destination folder: ./tests/dest7/dir2
+2023-09-06 05:21:41,842 - root - INFO - Created Directory in destination folder: ./tests/dest7/dir2/dir2
+2023-09-06 05:21:41,842 - root - INFO - Copied ./tests/src1/dir2/dummy1.txt to destination folder
+2023-09-06 05:21:41,843 - root - INFO - Copied ./tests/src1/dir2/dummy2.txt to destination folder
+2023-09-06 05:21:41,843 - root - INFO - Created Directory in destination folder: ./tests/dest7/dir2/dir1
+2023-09-06 05:21:41,844 - root - INFO - Copied ./tests/src1/dir2/dir1/dummy1.txt to destination folder
+2023-09-06 05:21:41,844 - root - INFO - Created Directory in destination folder: ./tests/dest7/dir3
+2023-09-06 05:21:41,844 - root - INFO - Copied ./tests/src1/dir3/dummy1.txt to destination folder
+2023-09-06 05:21:41,845 - root - INFO - Created Directory in destination folder: ./tests/dest7/dir3/dir1
+2023-09-06 05:21:41,845 - root - INFO - Copied ./tests/src1/dummy1.txt to destination folder
+2023-09-06 05:21:41,846 - root - INFO - Copied ./tests/src1/dummy2.txt to destination folder
+2023-09-06 05:21:41,846 - root - INFO - Created Directory in destination folder: ./tests/dest7/dir1
+2023-09-06 05:21:41,846 - root - INFO - Copied ./tests/src1/dir1/dummy3.txt to destination folder
+2023-09-06 05:21:41,846 - root - INFO - Created Directory in destination folder: ./tests/dest7/dir1/dir2
+2023-09-06 05:21:41,846 - root - INFO - Copied ./tests/src1/dir1/dummy1.txt to destination folder
+2023-09-06 05:21:41,847 - root - INFO - Copied ./tests/src1/dir1/dummy2.txt to destination folder
+2023-09-06 05:21:41,847 - root - INFO - Created Directory in destination folder: ./tests/dest7/dir1/dir1
+2023-09-06 05:21:41,847 - root - INFO - Finished folder sync ./tests/src1 
+ ./tests/dest7
+2023-09-06 06:55:41,514 - root - INFO - Started Logging for ./tests/sol1/ 
+ ./tests/dest1/
+2023-09-06 06:55:41,514 - root - INFO - Created Directory in destination folder: ./tests/dest1/dir2
+2023-09-06 06:55:41,514 - root - INFO - Created Directory in destination folder: ./tests/dest1/dir3
+2023-09-06 06:55:41,514 - root - INFO - Copied ./tests/sol1/dummy1.txt to destination folder
+2023-09-06 06:55:41,515 - root - INFO - Copied ./tests/sol1/dummy2.txt to destination folder
+2023-09-06 06:55:41,515 - root - INFO - Created Directory in destination folder: ./tests/dest1/dir1
+2023-09-06 06:55:41,515 - root - INFO - Copied ./tests/sol1/dir1/dummy.txt to destination folder
+2023-09-06 06:55:41,515 - root - INFO - Finished folder sync ./tests/sol1/ 
+ ./tests/dest1/
+2023-09-06 06:56:06,413 - root - INFO - Started Logging for ./tests/sol1/ 
+ ./tests/dest1/
+2023-09-06 06:56:06,414 - root - INFO - Copied ./tests/sol1/dummy1.txt to destination folder
+2023-09-06 06:56:06,414 - root - INFO - Finished folder sync ./tests/sol1/ 
+ ./tests/dest1/
+2023-09-06 06:56:40,733 - root - INFO - Started Logging for ./tests/sol1/ 
+ ./tests/dest1/
+2023-09-06 06:56:40,733 - root - INFO - Created Directory in destination folder: ./tests/dest1/dir1
+2023-09-06 06:56:40,734 - root - INFO - Copied ./tests/sol1/dir1/dummy.txt to destination folder
+2023-09-06 06:56:40,734 - root - INFO - Finished folder sync ./tests/sol1/ 
+ ./tests/dest1/
+2023-09-06 06:56:59,506 - root - INFO - Started Logging for ./tests/sol1/ 
+ ./tests/dest1/
+2023-09-06 06:56:59,506 - root - INFO - Removed file in destination ./tests/dest1/dir2/somethhing.docx
+2023-09-06 06:56:59,507 - root - INFO - Finished folder sync ./tests/sol1/ 
+ ./tests/dest1/
+2023-09-06 06:57:45,974 - root - INFO - Started Logging for ./tests/sol1/ 
+ ./tests/dest1/
+2023-09-06 06:57:45,974 - root - INFO - Copied ./tests/sol1/.gitignore to destination folder
+2023-09-06 06:57:45,975 - root - INFO - Finished folder sync ./tests/sol1/ 
+ ./tests/dest1/
+2023-09-06 06:58:20,675 - root - INFO - Started Logging for ./tests/sol1/ 
+ ./tests/dest1/
+2023-09-06 06:58:20,700 - root - INFO - Removed file in destination ./tests/dest1/dummy1.txt
+2023-09-06 06:58:20,701 - root - INFO - Finished folder sync ./tests/sol1/ 
+ ./tests/dest1/
+2023-09-06 06:58:54,049 - root - INFO - Started Logging for ./tests/sol1/ 
+ ./tests/dest1/
+2023-09-06 06:58:54,049 - root - INFO - Removed file in destination ./tests/dest1/dir2/dummy.doc
+2023-09-06 06:58:54,049 - root - INFO - Finished folder sync ./tests/sol1/ 
+ ./tests/dest1/
